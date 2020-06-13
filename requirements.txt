@@ -4,3 +4,4 @@ Django
 # Heroku settings
 gunicorn
 django-heroku
+whitenoise
