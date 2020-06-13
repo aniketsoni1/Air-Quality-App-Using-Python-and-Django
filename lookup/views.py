@@ -25,6 +25,8 @@ def home(request):
 		if not api:
 			return default_value(request)
 
+
+
 		if api[0]['Category']['Name'] == "Good":
 	  		category_description = "(0 - 50) Air quality is satisfactory, and air pollution poses little or no risk."
 	  		category_color = "good"
