@@ -3,6 +3,14 @@ import json
 import requests
 
 
+def default_value(request):
+	api = [{'Category': {'Name': 'Not available'}}]
+	category_description = 'Weather data is unavailable for this region. Please try another zipcode.'
+	category_color = 'moderate'
+	return render(request, 'home.html',
+				  {'api': api, 'category_description': category_description, 'category_color': category_color})
+
+
 def home(request):
 
 	if request.method == "POST":
@@ -13,6 +21,9 @@ def home(request):
 			api = json.loads(api_request.content)
 		except Exception as e:
 			api = "Error..."
+
+		if not api:
+			return default_value(request)
 
 		if api[0]['Category']['Name'] == "Good":
 	  		category_description = "(0 - 50) Air quality is satisfactory, and air pollution poses little or no risk."
@@ -42,7 +53,8 @@ def home(request):
 			api = json.loads(api_request.content)
 		except Exception as e:
 			api = "Error..."
-
+		if not api:
+			return default_value(request)
 		if api[0]['Category']['Name'] == "Good":
 	  		category_description = "(0 - 50) Air quality is satisfactory, and air pollution poses little or no risk."
 	  		category_color = "good"
