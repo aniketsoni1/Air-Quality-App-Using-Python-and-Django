@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <title>Weather App</title>
+    <title>Air Quality Weather App</title>
     <style>
     	.good {background-color: #0C0;}
     	.moderate {background-color: #FFFF00;}
@@ -29,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'about' %}">About Me<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'about' %}">About App<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form action="{% url 'home' %}" class="form-inline my-2 my-lg-0" method="POST">
