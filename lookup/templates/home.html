@@ -12,12 +12,13 @@
 	{% if api == "Error..." %}
 		There was an error, please try again...
 		{% else %}
-		<div class="jumbotron {{ category_color }}">
+        <div class="jumbotron {{ category_color }}">
   <h1 class="display-4">{{ api.0.Category.Name }}<br/><br/></h1>
-  <p class="lead">Current <b>{{ api.0.ReportingArea }}</b> Air Quality: {{ api.0.AQI }}<br/><br/></p>
+        <p class="lead">Current Location: <b>{{ api.0.ReportingArea }}</b></p>
+        <p class="lead">Air Quality: <b>{{ api.0.AQI }}</b> out of 500.</p>
+       <p class="lead">Description: <b>{{ category_description }}</b><br/><br/></p>
   	{% endif %}
-  {{ category_description }}
 
 {% endif %}
-
+</div>
 {% endblock %}
