@@ -1,8 +1,9 @@
 from django.shortcuts import render
+import json
+import requests
+
 
 def home(request):
-	import json
-	import requests
 
 	if request.method == "POST":
 		zipcode = request.POST['zipcode']
