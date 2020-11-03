@@ -1,4 +1,5 @@
-# Air Quality Weather App
+Air Quality Weather App
+---
 This application tells users the air quality for any zip code they type into the search box. This project is built using Python Django Web framework on the backend and HTML, CSS, Bootstrap and JavaScript on the frontend. And AirNow's API (https://www.airnow.gov/) for to get the air quality data.
 
 Use this app: https://airquality-app.herokuapp.com/
